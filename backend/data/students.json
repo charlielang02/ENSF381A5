@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "username": "john_doe",
+        "password": "secure123",
+        "email": "john@example.com",
+        "enrolled_courses": []
+    },
+    {
+        "id": 2,
+        "username": "jane_smith",
+        "password": "password456",
+        "email": "jane@example.com",
+        "enrolled_courses": []
+    },
+    {
+        "id": 3,
+        "username": "test_user",
+        "password": "Test@test1",
+        "email": "test@test.com",
+        "enrolled_courses": []
+    },
+    {
+        "id": 4,
+        "username": "test_user1",
+        "password": "Test@test1",
+        "email": "test@test.com",
+        "enrolled_courses": []
+    },
+    {
+        "id": 5,
+        "username": "test_user2",
+        "password": "Test@test2",
+        "email": "test@test.com",
+        "enrolled_courses": [
+            "Software Engineering Principles",
+            "Database Management",
+            "Cybersecurity Fundamentals",
+            "React for Beginners"
+        ]
+    }
+]

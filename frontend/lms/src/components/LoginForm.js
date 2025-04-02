@@ -4,20 +4,22 @@ import AuthContext from './AuthContext';
 import AuthMessage from './AuthMessage';
 import './LoginForm.css';
 import { useAuth } from './AuthProvider';
+import { loginUser } from '../api';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [authStatus, setAuthStatus] = useState(null);
     const { login } = useAuth();
+    const [userData, setUserData] = useState(null);
     const navigate = useNavigate();
 
     useEffect(() => {
         if (authStatus?.type === 'success') {
-            login();
+            login(userData);
             setTimeout(() => navigate('/courses'), 2000);
         }
-    }, [authStatus, navigate, login]);
+    }, [authStatus, navigate, login, userData]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
@@ -30,10 +32,12 @@ const LoginForm = () => {
             return;
         }
         try {
-            const response = await fetch('https://jsonplaceholder.typicode.com/users');
-            const users = await response.json();
-            const user = users.find(u => u.username === username && u.email === password);
-            if (user) {
+            const data = await loginUser(username, password);
+                setUserData({
+                    id: data.student_id,
+                    username: username
+                });
+            if (data.message === "Login successful") {
                 setAuthStatus({ type: 'success', message: 'Login successful! Redirecting...' });
             } else {
                 setAuthStatus({ type: 'error', message: 'Invalid username or password.' });

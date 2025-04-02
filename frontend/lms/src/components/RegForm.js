@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import DisplayStatus from './DisplayStatus';
 import '../SignupPage.css';
+import { registerUser } from '../api';
 
 const RegForm = () => {
     const [username, setUsername] = useState('');
@@ -40,13 +41,9 @@ const RegForm = () => {
         }
 
         try {
-            const response = await fetch('https://your-backend-api.com/register', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({ username, password, email }),
-            });
+            const response = await registerUser(username, password, email);
 
-            if (response.ok) {
+            if (response.message) {
                 setStatus({ type: 'success', message: 'Signup successful! Redirecting to login...' });
                 setTimeout(() => navigate('/login'), 2000);
             } else {

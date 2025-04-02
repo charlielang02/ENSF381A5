@@ -1,0 +1,82 @@
+[
+  {
+    "id": 1,
+    "name": "Web Development",
+    "instructor": "Dr. John Smith",
+    "description": "Master HTML, CSS, and JavaScript.",
+    "duration": "8 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 2,
+    "name": "React for Beginners",
+    "instructor": "Prof. Emily Davis",
+    "description": "Learn the fundamentals of React and component-based development.",
+    "duration": "6 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Data Structures & Algorithms",
+    "instructor": "Dr. Alan Turing",
+    "description": "Understand essential data structures and algorithms for problem-solving.",
+    "duration": "10 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Full-Stack Development",
+    "instructor": "Dr. Jane Roberts",
+    "description": "Build scalable full-stack applications with modern technologies.",
+    "duration": "12 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 5,
+    "name": "Python for Data Science",
+    "instructor": "Dr. Michael Chen",
+    "description": "Analyze and visualize data using Python and libraries like Pandas and Matplotlib.",
+    "duration": "8 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Machine Learning Basics",
+    "instructor": "Prof. Sarah Lee",
+    "description": "An introduction to supervised and unsupervised learning techniques.",
+    "duration": "10 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Database Management",
+    "instructor": "Dr. Robert Williams",
+    "description": "Learn SQL and NoSQL database management with PostgreSQL and MongoDB.",
+    "duration": "7 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Cybersecurity Fundamentals",
+    "instructor": "Prof. Linda Martinez",
+    "description": "Understand the principles of securing networks and applications.",
+    "duration": "9 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Mobile App Development",
+    "instructor": "Dr. Kevin Brown",
+    "description": "Develop mobile applications using React Native and Flutter.",
+    "duration": "8 weeks",
+    "image": "images/course1.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Software Engineering Principles",
+    "instructor": "Dr. Nancy Thompson",
+    "description": "Explore best practices in software design, testing, and deployment.",
+    "duration": "10 weeks",
+    "image": "images/course1.jpg"
+  }
+]

@@ -1,15 +1,19 @@
 import React, { useEffect, useState } from "react";
-import courses from "../data/courses";
-import testimonials from "../data/testimonials";
 import "./MainSection.css";
+import { getCourses, getTestimonials } from "../api";
 
 const MainSection = () => {
   const [featuredCourses, setFeaturedCourses] = useState([]);
   const [randomTestimonials, setRandomTestimonials] = useState([]);
 
   useEffect(() => {
-    setFeaturedCourses(courses.sort(() => 0.5 - Math.random()).slice(0, 3));
-    setRandomTestimonials(testimonials.sort(() => 0.5 - Math.random()).slice(0, 2));
+    const fetchData = async () => {
+      let courses = await getCourses();
+      let testimonials = await getTestimonials();
+      setFeaturedCourses(courses.sort(() => 0.5 - Math.random()).slice(0, 3));
+      setRandomTestimonials(testimonials.sort(() => 0.5 - Math.random()).slice(0, 2));
+    };
+    fetchData();
   }, []);
 
   return (

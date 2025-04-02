@@ -1,9 +1,12 @@
 import React from "react";
 import CourseItem from "./CourseItem";
-import courses from "../data/courses";
 import "../CoursesPage.css";
 
-const CourseCatalog = ({ onEnroll }) => {
+const CourseCatalog = ({ courses, onEnroll }) => {
+  if (!courses || courses.length === 0) {
+    return <p>Loading courses...</p>;
+  }
+
   return (
     <div className="course-catalog">
       <h2>Available Courses</h2>
@@ -17,3 +20,4 @@ const CourseCatalog = ({ onEnroll }) => {
 };
 
 export default CourseCatalog;
+
