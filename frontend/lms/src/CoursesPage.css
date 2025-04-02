@@ -1,0 +1,106 @@
+.content {
+  padding: 20px;
+}
+
+.course-catalog {
+  text-align: center;
+  color: #004080;
+}
+
+.course-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: flex-start;
+}
+
+.course-item,
+.enrolled-course {
+  flex-grow: 1;
+  flex-basis: calc(33.333% - 2px);
+  max-width: calc(33.333% - 2px);
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: 5px 5px 10px 0 rgba(0, 0, 0, 0.2);
+  background-color: lightblue;
+  text-align: center;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.course-list .course-item:nth-child(1):nth-last-child(1) {
+  flex-basis: calc(100% - 2px);
+  max-width: calc(100% - 2px);
+}
+
+.course-list .course-item:nth-child(1):nth-last-child(2),
+.course-list .course-item:nth-child(2):nth-last-child(1) {
+  flex-basis: calc(50% - 2px);
+  max-width: calc(50% - 2px);
+}
+
+img {
+  width: 100%;
+}
+
+button {
+  background-color: #004080;
+  color: white;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #003060;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+}
+
+.enrollment-list h2 {
+  color: #004080;
+}
+
+.enrollment-list {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1px;
+  justify-content: flex-start;
+}
+.enrollment-list .enrolled-course:nth-child(1):nth-last-child(1) {
+  flex-basis: calc(100% - 2px);
+  max-width: calc(100% - 2px);
+}
+
+.enrollment-list .enrolled-course:nth-child(1):nth-last-child(2),
+.enrollment-list .enrolled-course:nth-child(2):nth-last-child(1) {
+  flex-basis: calc(50% - 2px);
+  max-width: calc(50% - 2px);
+}
+
+.enrollment {
+  text-align: center;
+  color: #004080;
+}
+
+.course-description {
+  font-size: 14px;
+  color: #333;
+  margin-top: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0s 0.3s;
+}
+
+.course-item:hover .course-description {
+  visibility: visible;
+  opacity: 1;
+  transition: opacity 0.3s ease, visibility 0s;
+}
