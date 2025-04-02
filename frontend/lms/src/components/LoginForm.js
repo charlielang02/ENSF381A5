@@ -3,18 +3,21 @@ import { useNavigate } from 'react-router-dom';
 import AuthContext from './AuthContext';
 import AuthMessage from './AuthMessage';
 import './LoginForm.css';
+import { useAuth } from './AuthProvider';
 
 const LoginForm = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [authStatus, setAuthStatus] = useState(null);
+    const { login } = useAuth();
     const navigate = useNavigate();
 
     useEffect(() => {
         if (authStatus?.type === 'success') {
+            login();
             setTimeout(() => navigate('/courses'), 2000);
         }
-    }, [authStatus, navigate]);
+    }, [authStatus, navigate, login]);
 
     const handleLogin = async (e) => {
         e.preventDefault();
